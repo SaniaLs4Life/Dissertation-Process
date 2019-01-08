@@ -13,7 +13,7 @@
     <ul>
         <li><a href="index.php">Dissertation Process</a></li>
         <li style="float:right"><a href="./index.php">Logout</a></li>
-        <li style="float:right"><a href="about.asp">Profile</a></li>
+        <li style="float:right"><a href="about.asp">Hakan GENC</a></li>
     </ul>
     </div>
     <div class="main">
