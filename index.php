@@ -13,7 +13,7 @@
         <h3 class="title">Dissertation Process</h3>
         <div class="form">
             <h2>Login Form</h2>
-            <form action="#">
+            <form action="./index.php">
                 <table>
                     <tr>
                         <td><input type="text" name="username" placeholder="Username" /></td>
