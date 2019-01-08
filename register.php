@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/style.css?version=51">
+    <link rel="stylesheet" type="text/css" href="css/style.css?version=51">
     <title>Dissertation Process</title>
 </head>
 <body>
     <div class="main">
         <h3 class="title">Dissertation Process</h3>
         <div class="form">
-            <h2>Login Form</h2>
-            <form action="./dashboard/index.php">
+            <h2>Registration Form</h2>
+            <form action="./index.php">
                 <table>
                     <tr>
                         <td><input type="text" name="username" placeholder="Username" /></td>
@@ -23,8 +23,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="register.php" class="register">Register</a>
-                            <input type="submit" name="login" value="Login" />
+                            <a href="index.php" class="register">Login</a>
+                            <input type="submit" name="register" value="Register" />
                         </td>
                     </tr>
                 </table>
