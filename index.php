@@ -1,3 +1,26 @@
+<?php
+session_start();
+if(isset($_SESSION['user']))
+{
+	header("Location : ./dashboard/index.php");
+}
+include_once './db/server.php';
+
+if(isset($_POST['login']))
+{
+    $emailPWrID = $_POST["emailPWrID"];
+    $password = $_POST['password'];
+    $password = md5($password); 
+
+    $query = mysqli_query($link, "SELECT * FROM users WHERE userPWrID = '$emailPWrID' AND userPassword = '$password' OR userEmail = '$emailPWrID' AND userPassword = '$password'");
+	if($query->num_rows != 0) {
+        $_SESSION['user'] = true;
+        header("Location : ./dashboard/index.php");
+    } else {        
+        $msg = 'Wrong credentials!';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +36,11 @@
         <h3 class="title">Dissertation Process</h3>
         <div class="form">
             <h2>Login Form</h2>
-            <form action="./dashboard/index.php">
+            <form method="POST">
+                <span style="color:#2ecc71;"><?php echo @$msg;?></span>
                 <table>
                     <tr>
-                        <td><input type="text" name="username" placeholder="Username" /></td>
+                        <td><input type="text" name="emailPWrID" placeholder="Email or PWr ID" /></td>
                     </tr>
                     <tr>
                         <td><input type="text" name="password" placeholder="Password" /></td>
